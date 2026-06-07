@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login.com</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .outer
+            {
+                background: lightblue;
+                width: 80%;
+                max-width: 1200px;
+                height: 100vh;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .inner
+            {
+                background: white;
+                display: grid;
+                grid-template-columns: 46% 54%;
+                border-radius: 12px;
+                box-shadow:0 10px 30px rgba(0,0,0,0.25);
+                height:95vh;
+                overflow: hidden;
+            }
+            .or {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                color: grey;
+                margin: 20px 0;
+            }
+            .line {
+                flex-grow: 1;
+                height: 1px;
+            }
+            .line hr {
+                border: none;
+                border-top: 1px solid #ccc;
+                margin: 0;
+            }
+            .register
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 14px;
+            }
+            .account
+            {
+                display: flex;
+                justify-content: center;
+                gap: 8px;   
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            .form
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+            }
+            form {
+                width: 100%;
+                max-width: 400px;
+            }
+            .picture
+            {
+                background-image:  url('login.jpg');
+                background-size: cover;
+                background-position: center;
+                color: white;            
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                padding:60px 45px;
+            }
+            label {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            input[type="email"], input[type="password"] {
+                box-sizing: border-box;
+            }
+            @media (max-width:768px)
+            {
+                .inner
+                {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body style="background: black">
+        <div class="outer">
+            <div class="inner">
+                <div class="picture">
+                    <h2 style="margin-left:70px; margin-top:70px; font-size:42px; margin-bottom:10px;">Welcome Back</h2>
+                    <p style="margin-left:70px; font-size:22px; font-style:normal; padding-right:80px; margin-top:0;">Glad to see you again! Please login to continue your journey.</p>
+                </div>
+                <div class="form">
+                    <form onSubmit="return validate()">
+                        <h1 style="margin-bottom: 5px;">Welcome Back</h1>
+                        <p style="color:grey; margin-top: 0; margin-bottom: 25px;">Login to your account to continue</p>
+                        
+                        <label>Email</label><br/><br/>
+                        <input type="email" placeholder="Enter your mail" style="border-radius:5px; width:100%; height:6vh; border:1px solid grey; padding: 0 10px;">
+                        <br/><br/>
+                        
+                        <label>Password</label><br/><br/>
+                        <input type="password" placeholder="Enter your password" style="border-radius:5px; width:100%; height:6vh; border:1px solid grey; padding: 0 10px;">
+                        <br/><br/>
+                        
+                        <div class="register">
+                            <label style="font-weight: normal; display: flex; align-items: center; gap: 5px;">
+                                <input id="remember" type="checkbox"> Remember me
+                            </label>
+                            <div style="color:rgb(20,87,212); cursor: pointer; font-weight: bold;">Forgot Password?</div>
+                        </div>
+                        <br/><br/>
+                        
+                        <button type="submit" style="background:rgb(20,87,212); color:white; border-radius:7px; height: 6vh; width:100%; border:1px solid rgb(20, 87, 212); font-size: 16px; font-weight: bold; cursor: pointer;">Login</button>
+                        
+                        <div class="or">
+                            <div class="line"><hr/></div>
+                            <div>&nbsp;&nbsp;or&nbsp;&nbsp;</div>
+                            <div class="line"><hr/></div>
+                        </div>
+                        
+                        <button type="button" style="border-radius:7px; height: 6vh; width:100%; border:1px solid grey; background: white; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                            Login with Google
+                        </button>
+                        
+                        <div class="account">
+                            <p style="margin: 0; color: grey;">Don't have an account?</p>
+                            <p style="margin: 0; color:rgb(20,87,212); font-weight: bold; cursor: pointer;">Register here</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
